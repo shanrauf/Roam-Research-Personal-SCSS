@@ -1,0 +1,38 @@
+/* General Attribute CSS */
+/* Chain attributes to typed refs */
+@mixin chainAttributesToTypedRefs() {
+  div[data-page-links*='Type'] span.rm-attr-ref,
+  div[data-page-links*='Note Strength'] span.rm-attr-ref,
+  div[data-page-links*='Status'] span.rm-attr-ref {
+    margin-right: var(--attribute-chain-margin);
+  }
+}
+
+span.rm-attr-ref {
+  color: #fff !important;
+  background: gray !important;
+  padding: 0 0 0 0.4em;
+  display: inline;
+  position: relative;
+  font-size: inherit;
+  margin-right: 0.4em;
+  font-weight: 500;
+  border-left: 1px solid transparent;
+  border-radius: 4px 0 0 4px;
+}
+/* Attribute Triangle */
+span.rm-attr-ref:after {
+  border: solid transparent;
+  content: ' ';
+  height: 0;
+  width: 0;
+  position: absolute;
+  pointer-events: none;
+  border-color: rgba(255, 255, 255, 0);
+  border-left-color: gray;
+  border-width: var(--triangle-width);
+  margin-top: var(--triangle-margin-top);
+  z-index: 2;
+}
+
+@include chainAttributesToTypedRefs();

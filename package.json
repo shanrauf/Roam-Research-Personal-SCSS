@@ -1,0 +1,15 @@
+{
+  "name": "roam-personal-css",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "sass --watch src/main.scss build/output.css"
+  },
+  "author": "Shan Rauf",
+  "license": "ISC",
+  "devDependencies": {
+    "sass": "^1.43.2"
+  }
+}

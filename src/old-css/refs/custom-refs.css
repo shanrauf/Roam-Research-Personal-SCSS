@@ -1,0 +1,377 @@
+/* 
+Custom links
+*/
+:root {
+  color: #fff !important;
+  --triangle-width: 0.61em;
+  --triangle-margin-top: 0.12em;
+  --triangle-right-margin-right: 0.6em;
+  --chain-margin: calc(-1 * var(--triangle-right-margin-right) - 0.27em);
+  --attribute-chain-margin: -0.25em;
+  --default-bg: var(--bg-color);
+  --triangle-cutout-color: var(--page-color);
+
+  --generic-project-type-bg: #cc9c8a;
+  --sensemaking-activity-type-bg: #65a9ff;
+  --work-project-type-bg: #ff8178;
+  --personal-project-type-bg: #a674ff;
+  --food-type-bg: #dd5a31;
+  --task-type-bg: rgb(105,77,77);
+  --company-type-bg: rgb(128,102,102);
+  --idea-type-bg: #b9a80f;
+  --habit-type-bg: #3895D3;
+  --coding-activity-type-bg: rgb(125,170,113);
+  --song-type-bg: #D1B8FF;
+  --person-type-bg: #b56363;
+  --video-game-type-bg: #009688;
+  --observation-type-bg: #47fddc;
+  --decision-type-bg: rgb(255, 126, 126);
+  --piece-type-bg: #fbec5f;
+  --evergreen-type-bg: #76dd74;
+  --tweet-type-bg: #2980b9;
+  --coinage-type-bg: rgb(64,142,64);
+  --historical-event-type-bg: #fdfd96;
+  --friend-type-bg: rgb(160,160,244);
+  --book-type-bg: #8e44ad;
+  --video-type-bg: #f1c40f;
+  --podcast-type-bg: #7f8c8d;
+  --article-type-bg: #27ae60;
+  --movie-type-bg: rgb(162, 89, 89);
+  --tv-type-bg: blue;
+  --paper-type-bg: purple;
+  --question-type-bg: rgb(255, 255, 255);
+  --goal-type-bg: #FF6459;
+  --index-note-type-bg: rgb(134,96,96);
+}
+
+/* Adjust triangle in titles*/
+.rm-title-display {
+  color: #fff !important;
+  --triangle-width: 0.61em;
+  --triangle-margin-top: 0.03em;
+}
+
+/* Block Type */
+/* Push text out from under triangle*/
+span[data-link-title^='[[🧱]]'],
+span[data-tag^='[[🧱]]'] {
+  margin-right: var(--triangle-right-margin-right);
+}
+/* Background */
+span[data-link-title^='[[🧱]]'] > span.rm-page-ref,
+span[data-tag^='[[🧱]]'] {
+  background: var(--default-bg);
+  padding-left: 0.5em;
+  display: inline;
+  position: relative;
+  font-size: inherit;
+  font-weight: 500;
+}
+/* Triangle cutout*/
+span[data-link-title^='[[🧱]]'] > span.rm-page-ref:before,
+span[data-tag^='[[🧱]]']:before {
+  left: 0;
+  border: solid transparent;
+  content: ' ';
+  height: 0;
+  width: 0;
+  position: absolute;
+  pointer-events: none;
+  border-left-color: var(--triangle-cutout-color);
+  border-width: var(--triangle-width);
+  margin-top: var(--triangle-margin-top);
+  z-index: 1;
+}
+/* Triangle right */
+span[data-link-title^='[[🧱]]']:after,
+span[data-link-title^='[[[[🧱]]']:after,
+span[data-tag^='[[🧱]]']:after,
+span[data-tag^='[[[[🧱]]']:after {
+  border: solid transparent;
+  content: ' ';
+  height: 0;
+  width: 0;
+  position: absolute;
+  pointer-events: none;
+  border-color: rgba(255, 255, 255, 0);
+  border-left-color: var(--default-bg);
+  border-width: var(--triangle-width);
+  margin-top: var(--triangle-margin-top);
+  z-index: 2;
+}
+
+/* Typed ref bg */
+span[data-link-title^='[[[[🧱]]'] {
+  position: relative;
+  background: var(--default-bg);
+  /* Push text out from under triangle*/
+  margin-right: var(--triangle-right-margin-right);
+}
+
+/* Show hidden links next to attributes */
+:not(span[data-link-title]) + span[data-link-title^='[[🧱]]'],
+:not(span[data-link-title]) + span[data-tag^='[[🧱]]'] {
+  display: inline !important;
+}
+
+/* Typed ref text */
+span[data-link-title*='[[🧱]] '] .rm-page-ref {
+  color: #fff !important;
+  font-weight: 500;
+}
+
+/* Chain block types */
+span[data-link-title^='[[🧱]]'] + span[data-link-title^='[[🧱]]'] {
+  margin-left: var(--chain-margin);
+}
+
+/* Chain attributes to typed refs */
+div[data-page-links*='Type']
+span.rm-attr-ref,
+div[data-page-links*='Note Strength']
+span.rm-attr-ref,
+div[data-page-links*='Status']
+span.rm-attr-ref{
+  margin-right: var(--attribute-chain-margin);
+}
+
+/* Nested typed ref */
+/* Remove triangle cutout */
+span[data-link-title^="[[[[🧱]] "]
+span[data-link-title^="[[[[🧱]] "]
+span[data-link-title^="[[🧱]] "] >
+span.rm-page-ref {
+  display: none;
+}
+/* Reduce triangle margin */
+span[data-link-title^="[[[[🧱]] "]
+span[data-link-title^="[[[[🧱]] "]
+span[data-link-title^='[[🧱]]'] {
+  margin-right: 0;
+}
+span[data-link-title^="[[[[🧱]] "]
+span[data-link-title^="[[[[🧱]] "]
+span[data-link-title^="[[🧱]] "]:after {
+  display: none;
+}
+
+/* General Attribute CSS */
+span.rm-attr-ref {
+  color: #fff !important;
+  background: gray !important;
+  padding: 0 0 0 0.4em;
+  display: inline;
+  position: relative;
+  font-size: inherit;
+  margin-right: 0.4em;
+  font-weight: 500;
+  border-left: 1px solid transparent;
+  border-radius: 4px 0 0 4px;
+}
+/* Attribute Triangle */
+span.rm-attr-ref:after {
+  border: solid transparent;
+  content: ' ';
+  height: 0;
+  width: 0;
+  position: absolute;
+  pointer-events: none;
+  border-color: rgba(255, 255, 255, 0);
+  border-left-color: gray;
+  border-width: var(--triangle-width);
+  margin-top: var(--triangle-margin-top);
+  z-index: 2;
+}
+
+/* 🌲 */
+span[data-link-title='[[🧱]] 🌲'],
+span[data-tag='[[🧱]] 🌲'] {
+  color: #fff !important;
+  --default-bg: var(--evergreen-type-bg);
+}
+/* ⏮ */
+span[data-link-title='[[🧱]] ⏮'],
+span[data-tag='[[🧱]] ⏮'] {
+  color: #fff !important;
+  --default-bg: var(--historical-event-type-bg);
+}
+/* § */
+span[data-link-title='[[🧱]] §'],
+span[data-tag='[[🧱]] §'] {
+  color: #fff !important;
+  --default-bg: var(--coinage-type-bg);
+}
+/* 💼 */
+span[data-link-title='[[🧱]] 💼'],
+span[data-tag='[[🧱]] 💼'] {
+  color: #fff !important;
+  --default-bg: var(--company-type-bg);
+}
+/* 🎶 */
+span[data-link-title='[[🧱]] 🎶'],
+span[data-tag='[[🧱]] 🎶'] {
+  color: #fff !important;
+  --default-bg: var(--song-type-bg);
+}
+/* 🍴 */
+span[data-link-title='[[🧱]] 🍴'],
+span[data-tag='[[🧱]] 🍴'] {
+  color: #fff !important;
+  --default-bg: var(--food-type-bg);
+}
+/* 🎮 */
+span[data-link-title='[[🧱]] 🎮'],
+span[data-tag='[[🧱]] 🎮'] {
+  color: #fff !important;
+  --default-bg: var(--video-game-type-bg);
+}
+/* ✅ */
+span[data-link-title='[[🧱]] ✅'],
+span[data-tag='[[🧱]] ✅'] {
+  color: #fff !important;
+  --default-bg: var(--task-type-bg);
+}
+/* 💡 */
+span[data-link-title='[[🧱]] 💡'],
+span[data-tag='[[🧱]] 💡'] {
+  color: #fff !important;
+  --default-bg: var(--idea-type-bg);
+}
+/* 💻 */
+span[data-link-title='[[🧱]] 💻'],
+span[data-tag='[[🧱]] 💻'] {
+  color: #fff !important;
+  --default-bg: var(--coding-activity-type-bg);
+}
+/* 🔂 */
+span[data-link-title='[[🧱]] 🔂'],
+span[data-tag='[[🧱]] 🔂'] {
+  color: #fff !important;
+  --default-bg: var(--habit-type-bg);
+}
+/* 🧍‍♂️ */
+span[data-link-title='[[🧱]] 🧍‍♂️'],
+span[data-tag='[[🧱]] 🧍‍♂️'] {
+  color: #fff !important;
+  --default-bg: var(--person-type-bg);
+}
+/* 👬 */
+span[data-link-title='[[🧱]] 👬'],
+span[data-tag='[[🧱]] 👬'] {
+  color: #fff !important;
+  --default-bg: var(--friend-type-bg);
+}
+/* 📇 */
+span[data-link-title='[[🧱]] 📇'],
+span[data-tag='[[🧱]] 📇'] {
+  color: #fff !important;
+  --default-bg: var(--index-note-type-bg);
+}
+/* 🔭 */
+span[data-link-title='[[🧱]] 🔭'],
+span[data-tag='[[🧱]] 🔭'] {
+  color: #fff !important;
+  --default-bg: var(--observation-type-bg);
+}
+/* ❗ */
+span[data-link-title='[[🧱]] ❗'],
+span[data-tag='[[🧱]] ❗'] {
+  color: #fff !important;
+  --default-bg: var(--decision-type-bg);
+}
+/* 📋 */
+span[data-link-title='[[🧱]] 📋'],
+span[data-tag='[[🧱]] 📋'] {
+  color: #fff !important;
+  --default-bg: var(--generic-project-type-bg);
+}
+/* 📝 */
+span[data-link-title='[[🧱]] 📝'],
+span[data-tag='[[🧱]] 📝'] {
+  color: #fff !important;
+  --default-bg: var(--piece-type-bg);
+}
+/* 🤓 */
+span[data-link-title='[[🧱]] 🤓'],
+span[data-tag='[[🧱]] 🤓'] {
+  color: #fff !important;
+  --default-bg: var(--sensemaking-activity-type-bg);
+}
+/* 🧐 */
+span[data-link-title='[[🧱]] 🧐'],
+span[data-tag='[[🧱]] 🧐'] {
+  color: #fff !important;
+  --default-bg: var(--work-project-type-bg);
+}
+/* 🌴 */
+span[data-link-title='[[🧱]] 🌴'],
+span[data-tag='[[🧱]] 🌴'] {
+  color: #fff !important;
+  --default-bg: var(--personal-project-type-bg);
+}
+/* 🦚 */
+span[data-link-title='[[🧱]] 🦚'],
+span[data-tag='[[🧱]] 🦚'] {
+  color: #fff !important;
+  --default-bg: var(--tweet-type-bg);
+}
+/* 📕 */
+span[data-link-title='[[🧱]] 📕'],
+span[data-tag='[[🧱]] 📕'] {
+  color: #fff !important;
+  --default-bg: var(--book-type-bg);
+}
+/* 🎥 */
+span[data-link-title='[[🧱]] 🎥'],
+span[data-tag='[[🧱]] 🎥'] {
+  color: #fff !important;
+  --default-bg: var(--video-type-bg);
+}
+/* 🎬 */
+span[data-link-title='[[🧱]] 🎬'],
+span[data-tag='[[🧱]] 🎬'] {
+  color: #fff !important;
+  --default-bg: var(--movie-type-bg);
+}
+/* 📺 */
+span[data-link-title='[[🧱]] 📺'],
+span[data-tag='[[🧱]] 📺'] {
+  color: #fff !important;
+  --default-bg: var(--tv-type-bg);
+}
+/* 📜 */
+span[data-link-title='[[🧱]] 📜'],
+span[data-tag='[[🧱]] 📜'] {
+  color: #fff !important;
+  --default-bg: var(--paper-type-bg);
+}
+/* ❓ */
+span[data-link-title='[[🧱]] ❓'],
+span[data-tag='[[🧱]] ❓'] {
+  color: #fff !important;
+  --default-bg: var(--question-type-bg);
+}
+/* 🔊 */
+span[data-link-title='[[🧱]] 🔊'],
+span[data-tag='[[🧱]] 🔊'] {
+  color: #fff !important;
+  --default-bg: var(--podcast-type-bg);
+}
+/* 🎯 */
+span[data-link-title='[[🧱]] 🎯'],
+span[data-tag='[[🧱]] 🎯'] {
+  color: #fff !important;
+  --default-bg: var(--goal-type-bg);
+}
+/* Waiting */
+span[data-link-title='[[🧱]] Waiting'],
+span[data-tag='[[🧱]] Waiting'] {
+  color: #fff !important;
+  --default-bg: var(--podcast-type-bg);
+}
+/* Inbox */
+span[data-link-title='[[🧱]] Inbox'],
+span[data-tag='[[🧱]] Inbox'] {
+  color: #fff !important;
+  --default-bg: var(--podcast-type-bg);
+}

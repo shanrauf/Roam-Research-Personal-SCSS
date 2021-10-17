@@ -1,0 +1,132 @@
+/* Daily Notes page ref */
+span[data-link-uid^='01-'] .rm-page-ref {
+  background: #5B8D91 !important;
+  color: #fff !important;
+  padding: 0 3px;
+  border: 2px solid transparent;
+  border-radius: 10px;
+}
+span[data-link-uid^='01-'] .rm-page-ref:before {
+  content: '📅 ';
+}
+
+span[data-link-uid^='02-'] .rm-page-ref {
+  background: #5B8D91 !important;
+  color: #fff !important;
+  padding: 0 3px;
+  border: 2px solid transparent;
+  border-radius: 10px;
+}
+span[data-link-uid^='02-'] .rm-page-ref:before {
+  content: '📅 ';
+}
+
+span[data-link-uid^='03-'] .rm-page-ref {
+  background: #5B8D91 !important;
+  color: #fff !important;
+  padding: 0 3px;
+  border: 2px solid transparent;
+  border-radius: 10px;
+}
+span[data-link-uid^='03-'] .rm-page-ref:before {
+  content: '📅 ';
+}
+
+span[data-link-uid^='04-'] .rm-page-ref {
+  background: #5B8D91 !important;
+  color: #fff !important;
+  padding: 0 3px;
+  border: 2px solid transparent;
+  border-radius: 10px;
+}
+span[data-link-uid^='04-'] .rm-page-ref:before {
+  content: '📅 ';
+}
+
+span[data-link-uid^='05-'] .rm-page-ref {
+  background: #5B8D91 !important;
+  color: #fff !important;
+  padding: 0 3px;
+  border: 2px solid transparent;
+  border-radius: 10px;
+}
+span[data-link-uid^='05-'] .rm-page-ref:before {
+  content: '📅 ';
+}
+
+span[data-link-uid^='06-'] .rm-page-ref {
+  background: #5B8D91 !important;
+  color: #fff !important;
+  padding: 0 3px;
+  border: 2px solid transparent;
+  border-radius: 10px;
+}
+span[data-link-uid^='06-'] .rm-page-ref:before {
+  content: '📅 ';
+}
+
+span[data-link-uid^='07-'] .rm-page-ref {
+  background: #5B8D91 !important;
+  color: #fff !important;
+  padding: 0 3px;
+  border: 2px solid transparent;
+  border-radius: 10px;
+}
+span[data-link-uid^='07-'] .rm-page-ref:before {
+  content: '📅 ';
+}
+
+span[data-link-uid^='08-'] .rm-page-ref {
+  background: #5B8D91 !important;
+  color: #fff !important;
+  padding: 0 3px;
+  border: 2px solid transparent;
+  border-radius: 10px;
+}
+span[data-link-uid^='08-'] .rm-page-ref:before {
+  content: '📅 ';
+}
+
+span[data-link-uid^='09-'] .rm-page-ref {
+  background: #5B8D91 !important;
+  color: #fff !important;
+  padding: 0 3px;
+  border: 2px solid transparent;
+  border-radius: 10px;
+}
+span[data-link-uid^='09-'] .rm-page-ref:before {
+  content: '📅 ';
+}
+
+span[data-link-uid^='10-'] .rm-page-ref {
+  background: #5B8D91 !important;
+  color: #fff !important;
+  padding: 0 3px;
+  border: 2px solid transparent;
+  border-radius: 10px;
+}
+span[data-link-uid^='10-'] .rm-page-ref:before {
+  content: '📅 ';
+}
+
+span[data-link-uid^='11-'] .rm-page-ref {
+  background: #5B8D91 !important;
+  color: #fff !important;
+  padding: 0 3px;
+  border: 2px solid transparent;
+  border-radius: 10px;
+}
+span[data-link-uid^='11-'] .rm-page-ref:before {
+  content: '📅 ';
+}
+
+span[data-link-uid^='12-'] .rm-page-ref {
+  background: #5B8D91 !important;
+  color: #fff !important;
+  padding: 0 3px;
+  border: 2px solid transparent;
+  border-radius: 10px;
+}
+span[data-link-uid^='12-'] .rm-page-ref:before {
+  content: '📅 ';
+}

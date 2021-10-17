@@ -1,0 +1,27 @@
+/*
+Author:: @CatoMinor3
+Version:: 1
+Date:: October 28th, 2020
+Changes log
+Support: 
+- Paypal: https://www.paypal.me/catominor3
+- Patreon: https://www.patreon.com/catominor
+What is this? 
+A little custom CSS that changes the behaviour of embedded tweets: 
+instead of clicking on a button, they are being shown on hover over the button.
+*/
+
+/* ---------------- code -----------------*/
+
+.twitter-tweet iframe {
+  margin-top: -14px;
+  display: none !important;
+}
+
+.twitter-tweet iframe:hover {
+  display: flex !important;
+}
+
+sub + button:hover + div > div.twitter-tweet > iframe {
+  display: flex !important;
+}

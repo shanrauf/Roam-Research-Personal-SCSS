@@ -1,0 +1,166 @@
+/* 🌲 */
+:root {
+  /* Low opacity to see a nested tag in a
+     tag (when both have no note strength */
+  --note-strength: rgba(117, 159, 179, 0.5);
+
+  /* Strength colors */
+  --0-bg: #951515;
+  --1-bg: #952f15;
+  --2-bg: #954815;
+  --3-bg: #956215;
+  --4-bg: #957b15;
+  --5-bg: #959515;
+  --6-bg: #7b9515;
+  --7-bg: #629515;
+  --8-bg: #489515;
+  --9-bg: #2e9515;
+  --10-bg: #159515;
+}
+
+/* Background */
+span[data-link-title^='[[[[🧱]] 🌲]]'] {
+  background: var(--note-strength);
+}
+
+/* Triangle right */
+span[data-link-title^='[[[[🧱]] 🌲]]']:after {
+  border-left-color: var(--note-strength);
+}
+
+/*
+* ------------------
+* NOTE STRENGTH
+* ------------------
+*/
+span[data-link-title='[[🧱]] 0'] {
+  display: none;
+}
+span[data-link-title$='[[[[🧱]] 0]]'] {
+  --note-strength: var(--0-bg);
+}
+span[data-link-title='[[🧱]] 0'],
+span[data-tag='[[🧱]] 0'] {
+  --default-bg: var(--0-bg);
+  color: #fff !important;
+}
+
+span[data-link-title='[[🧱]] 1'] {
+  display: none;
+}
+span[data-link-title$='[[[[🧱]] 1]]'] {
+  --note-strength: var(--1-bg);
+}
+span[data-link-title='[[🧱]] 1'],
+span[data-tag='[[🧱]] 1'] {
+  --default-bg: var(--1-bg);
+  color: #fff !important;
+}
+
+span[data-link-title='[[🧱]] 2'] {
+  display: none;
+}
+span[data-link-title$='[[[[🧱]] 2]]'] {
+  --note-strength: var(--2-bg);
+}
+span[data-link-title='[[🧱]] 2'],
+span[data-tag='[[🧱]] 2'] {
+  --default-bg: var(--2-bg);
+  color: #fff !important;
+}
+
+span[data-link-title='[[🧱]] 3'] {
+  display: none;
+}
+span[data-link-title$='[[[[🧱]] 3]]'] {
+  --note-strength: var(--3-bg);
+}
+span[data-link-title='[[🧱]] 3'],
+span[data-tag='[[🧱]] 3'] {
+  --default-bg: var(--3-bg);
+  color: #fff !important;
+}
+
+span[data-link-title='[[🧱]] 4'] {
+  display: none;
+}
+span[data-link-title$='[[[[🧱]] 4]]'] {
+  --note-strength: var(--4-bg);
+}
+span[data-link-title='[[🧱]] 4'],
+span[data-tag='[[🧱]] 4'] {
+  --default-bg: var(--4-bg);
+  color: #fff !important;
+}
+
+span[data-link-title='[[🧱]] 5'] {
+  display: none;
+}
+span[data-link-title$='[[[[🧱]] 5]]'] {
+  --note-strength: var(--5-bg);
+}
+span[data-link-title='[[🧱]] 5'],
+span[data-tag='[[🧱]] 5'] {
+  --default-bg: var(--5-bg);
+  color: #fff !important;
+}
+
+span[data-link-title='[[🧱]] 6'] {
+  display: none;
+}
+span[data-link-title$='[[[[🧱]] 6]]'] {
+  --note-strength: var(--6-bg);
+}
+span[data-link-title='[[🧱]] 6'],
+span[data-tag='[[🧱]] 6'] {
+  --default-bg: var(--6-bg);
+  color: #fff !important;
+}
+
+span[data-link-title='[[🧱]] 7'] {
+  display: none;
+}
+span[data-link-title$='[[[[🧱]] 7]]'] {
+  --note-strength: var(--7-bg);
+}
+span[data-link-title='[[🧱]] 7'],
+span[data-tag='[[🧱]] 7'] {
+  --default-bg: var(--7-bg);
+  color: #fff !important;
+}
+
+span[data-link-title='[[🧱]] 8'] {
+  display: none;
+}
+span[data-link-title$='[[[[🧱]] 8]]'] {
+  --note-strength: var(--8-bg);
+}
+span[data-link-title='[[🧱]] 8'],
+span[data-tag='[[🧱]] 8'] {
+  --default-bg: var(--8-bg);
+  color: #fff !important;
+}
+
+span[data-link-title='[[🧱]] 9'] {
+  display: none;
+}
+span[data-link-title$='[[[[🧱]] 9]]'] {
+  --note-strength: var(--9-bg);
+}
+span[data-link-title='[[🧱]] 9'],
+span[data-tag='[[🧱]] 9'] {
+  --default-bg: var(--9-bg);
+  color: #fff !important;
+}
+
+span[data-link-title='[[🧱]] 10'] {
+  display: none;
+}
+span[data-link-title$='[[[[🧱]] 10]]'] {
+  --note-strength: var(--10-bg);
+}
+span[data-link-title='[[🧱]] 10'],
+span[data-tag='[[🧱]] 10'] {
+  --default-bg: var(--10-bg);
+  color: #fff !important;
+}

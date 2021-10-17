@@ -1,0 +1,11 @@
+.rm-alias {
+  font-weight: bold;
+  color: rgb(var(--color-primary));
+}
+
+.rm-alias--external:before {
+  content: "🌎";
+}
+.rm-alias--page:before, .rm-alias--block:before {
+  content: "🔗";
+}

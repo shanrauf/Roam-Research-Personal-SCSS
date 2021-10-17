@@ -1,0 +1,55 @@
+span[data-tag='[[🧱]] 0'] {
+  display: inline;
+  --default-bg: var(--0-bg);
+  color: #fff !important;
+}
+span[data-tag='[[🧱]] 1'] {
+  display: inline;
+  --default-bg: var(--1-bg);
+  color: #fff !important;
+}
+span[data-tag='[[🧱]] 2'] {
+  display: inline;
+  --default-bg: var(--2-bg);
+  color: #fff !important;
+}
+span[data-tag='[[🧱]] 3'] {
+  display: inline;
+  --default-bg: var(--3-bg);
+  color: #fff !important;
+}
+span[data-tag='[[🧱]] 4'] {
+  display: inline;
+  --default-bg: var(--4-bg);
+  color: #fff !important;
+}
+span[data-tag='[[🧱]] 5'] {
+  display: inline;
+  --default-bg: var(--5-bg);
+  color: #fff !important;
+}
+span[data-tag='[[🧱]] 6'] {
+  display: inline;
+  --default-bg: var(--6-bg);
+  color: #fff !important;
+}
+span[data-tag='[[🧱]] 7'] {
+  display: inline;
+  --default-bg: var(--7-bg);
+  color: #fff !important;
+}
+span[data-tag='[[🧱]] 8'] {
+  display: inline;
+  --default-bg: var(--8-bg);
+  color: #fff !important;
+}
+span[data-tag='[[🧱]] 9'] {
+  display: inline;
+  --default-bg: var(--9-bg);
+  color: #fff !important;
+}
+span[data-tag='[[🧱]] 10'] {
+  display: inline;
+  --default-bg: var(--10-bg);
+  color: #fff !important;
+}

@@ -1,0 +1,17 @@
+.roam-block-container div.roam-block-container {
+  box-shadow: -2px 0px #bfccd6;
+  transition: box-shadow 1s;
+}
+
+.roam-block-container div.roam-block-container:hover {
+  box-shadow: -2px 0px #ff877e;
+  transition: box-shadow 0.5s;
+}
+
+.roam-block-container:focus-within
+  > .rm-block-main
+  > div:nth-child(1)
+  .rm-bullet
+  .rm-bullet__inner {
+  background-color: #ff877e;
+}

@@ -1,0 +1,229 @@
+/* 
+Custom links
+*/
+
+// TODO: You need like nested for loops if you want chaining block types -_-
+
+// Change vars later if u want/need to
+$blockTypes: (
+  '🌲': --evergreen-type-bg,
+  '⏮': --historical-event-type-bg,
+  '§': --coinage-type-bg,
+  '💼': --company-type-bg,
+  '🎶': --song-type-bg,
+  '🍴': --food-type-bg,
+  '🎮': --video-game-type-bg,
+  '✅': --task-type-bg,
+  '💡': --idea-type-bg,
+  '💻': --coding-activity-type-bg,
+  '🔂': --habit-type-bg,
+  '🧍‍♂️': --person-type-bg,
+  '👬': --friend-type-bg,
+  '📇': --index-note-type-bg,
+  '🔭': --observation-type-bg,
+  '❗': --decision-type-bg,
+  '📋': --generic-project-type-bg,
+  '📝': --piece-type-bg,
+  '🤓': --sensemaking-activity-type-bg,
+  '🧐': --work-project-type-bg,
+  '🌴': --personal-project-type-bg,
+  '🦚': --tweet-type-bg,
+  '📕': --book-type-bg,
+  '🎥': --video-type-bg,
+  '🎬': --movie-type-bg,
+  '📺': --tv-type-bg,
+  '📜': --paper-type-bg,
+  '❓': --question-type-bg,
+  '🔊': --podcast-type-bg,
+  '🎯': --goal-type-bg,
+  '💚': --feeling-type-bg,
+);
+
+:root {
+  color: #fff !important;
+  --triangle-width: 0.61em;
+  --triangle-margin-top: 0.12em;
+  --triangle-right-margin-right: 0.6em;
+  --chain-margin: calc(-1 * var(--triangle-right-margin-right) - 0.27em);
+  --attribute-chain-margin: -0.25em;
+  --default-bg: var(--bg-color);
+  --triangle-cutout-color: var(--page-color);
+
+  --generic-project-type-bg: #cc9c8a;
+  --sensemaking-activity-type-bg: #65a9ff;
+  --work-project-type-bg: #ff8178;
+  --personal-project-type-bg: #a674ff;
+  --food-type-bg: #dd5a31;
+  --task-type-bg: rgb(105, 77, 77);
+  --company-type-bg: rgb(128, 102, 102);
+  --idea-type-bg: #b9a80f;
+  --habit-type-bg: #3895d3;
+  --coding-activity-type-bg: rgb(125, 170, 113);
+  --song-type-bg: #d1b8ff;
+  --person-type-bg: #b56363;
+  --video-game-type-bg: #009688;
+  --observation-type-bg: #47fddc;
+  --decision-type-bg: rgb(255, 126, 126);
+  --piece-type-bg: #fbec5f;
+  --evergreen-type-bg: #76dd74;
+  --tweet-type-bg: #2980b9;
+  --coinage-type-bg: rgb(64, 142, 64);
+  --historical-event-type-bg: #fdfd96;
+  --friend-type-bg: rgb(160, 160, 244);
+  --book-type-bg: #8e44ad;
+  --video-type-bg: #f1c40f;
+  --podcast-type-bg: #7f8c8d;
+  --article-type-bg: #27ae60;
+  --movie-type-bg: rgb(162, 89, 89);
+  --tv-type-bg: blue;
+  --paper-type-bg: purple;
+  --question-type-bg: rgb(255, 255, 255);
+  --goal-type-bg: #ff6459;
+  --index-note-type-bg: rgb(134, 96, 96);
+  --feeling-type-bg: rgb(185, 174, 174);
+}
+
+/* Adjust triangle in titles*/
+.rm-title-display {
+  color: #fff !important;
+  --triangle-width: 0.61em;
+  --triangle-margin-top: 0.03em;
+}
+
+/* Push text out from under triangle*/
+@mixin pushTextFromUnderTriangle($type) {
+  span[data-link-title='#{$type}'],
+  span[data-tag='#{$type}}'] {
+    margin-right: var(--triangle-right-margin-right);
+  }
+}
+
+/* Add styling for block type */
+@mixin defaultBlockTypeBg($type) {
+  span[data-link-title='#{$type}'] > span.rm-page-ref,
+  span[data-tag='#{$type}'] {
+    background: var(--default-bg);
+    padding-left: 0.5em;
+    display: inline;
+    position: relative;
+    font-size: inherit;
+    font-weight: 500;
+  }
+}
+
+/* Add triangle cutout (left triangel) */
+@mixin blockTypeTriangleCutout($type) {
+  span[data-link-title='#{$type}'] > span.rm-page-ref:before,
+  span[data-tag='#{$type}']:before {
+    left: 0;
+    border: solid transparent;
+    content: ' ';
+    height: 0;
+    width: 0;
+    position: absolute;
+    pointer-events: none;
+    border-left-color: var(--triangle-cutout-color);
+    border-width: var(--triangle-width);
+    margin-top: var(--triangle-margin-top);
+    z-index: 1;
+  }
+}
+
+/* Add triangle on the right */
+@mixin blockTypeTriangleRight($type) {
+  span[data-link-title='#{$type}']:after,
+  span[data-link-title^='[[#{$type}']:after,
+  span[data-tag^='#{$type}']:after,
+  span[data-tag^='[[#{$type}']:after {
+    border: solid transparent;
+    content: ' ';
+    height: 0;
+    width: 0;
+    position: absolute;
+    pointer-events: none;
+    border-color: rgba(255, 255, 255, 0);
+    border-left-color: var(--default-bg);
+    border-width: var(--triangle-width);
+    margin-top: var(--triangle-margin-top);
+    z-index: 2;
+  }
+}
+
+/* Typed ref bg */
+@mixin typedReferenceBg($type) {
+  span[data-link-title^='[[#{$type}'] {
+    position: relative;
+    background: var(--default-bg);
+    /* Push text out from under triangle*/
+    margin-right: var(--triangle-right-margin-right);
+  }
+}
+
+/* Show hidden links next to attributes */
+@mixin revealHiddenLinksNextToAttributes($type) {
+  :not(span[data-link-title]) + span[data-link-title='#{$type}'],
+  :not(span[data-link-title]) + span[data-tag='#{$type}'] {
+    display: inline !important;
+  }
+}
+
+/* Typed ref text */
+// [[[[[[🧱]] 🌲]] Evergreen Notes]]
+@mixin typedRefText($type) {
+  span[data-link-title*='[[#{$type}]] '] .rm-page-ref {
+    color: #fff !important;
+    font-weight: 500;
+  }
+}
+
+/* Chain block types (may remove if performance issues) */
+@mixin chainBlockTypes($type1, $type2) {
+  span[data-link-title^='#{$type1}'] + span[data-link-title^='#{$type2}'] {
+    margin-left: var(--chain-margin);
+  }
+}
+
+/* Nested typed references: remove cutout, reduce margin (may remove if performance issues) */
+@mixin removeTriangleCutoutOnNestedTypedRefs($type1, $type2) {
+  /* Remove triangle cutout */
+  span[data-link-title^='[[#{$type1}']
+    span[data-link-title^='[[#{$type2}']
+    span[data-link-title='#{$type2}']
+    > span.rm-page-ref {
+    display: none;
+  }
+  /* Reduce triangle margin */
+  span[data-link-title^='[[#{$type1}']
+    span[data-link-title^='[[#{$type2}']
+    span[data-link-title='#{$type2}'] {
+    margin-right: 0;
+  }
+  span[data-link-title^='[[#{$type1}']
+    span[data-link-title^='[[#{$type2}']
+    span[data-link-title='#{$type2}']:after {
+    display: none;
+  }
+}
+
+@mixin blockTypeSpecificBg($type, $color) {
+  span[data-link-title='#{$type}'],
+  span[data-tag='#{$type}'] {
+    color: #fff !important;
+    --default-bg: var(#{$color});
+  }
+}
+
+@each $type, $color in $blockTypes {
+  @include pushTextFromUnderTriangle($type);
+  @include defaultBlockTypeBg($type);
+  @include blockTypeTriangleCutout($type);
+  @include blockTypeTriangleRight($type);
+  @include typedReferenceBg($type);
+  @include revealHiddenLinksNextToAttributes($type);
+  @include blockTypeSpecificBg($type, $color);
+  @include typedRefText($type);
+  @each $type2, $color2 in $blockTypes {
+    @include chainBlockTypes($type, $type2);
+    @include removeTriangleCutoutOnNestedTypedRefs($type, $type2);
+  }
+}

@@ -1,0 +1,214 @@
+/* IMPORT CORE THEME */
+@import url("https://kylenoble.github.io/roam-themes/core.css");
+
+/* GOOGLE FONTS */
+@import url("https://fonts.googleapis.com/css2?family=Oxanium:wght@600&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,400;0,700;1,400;1,700&display=swap");
+
+/* VARIABLES */
+:root {
+  --page-width: 616px;
+
+  --header-font: "Oxanium", "Inter", sans-serif;
+  --body-font: "Ubuntu", "Inter", sans-serif;
+
+  --bg-color: #000000;
+  --page-color: rgba(44, 44, 44, 0.95);
+
+  --text-color: #ffffff;
+  --icon-color: rgb(102, 102, 102);
+  --bullet-color: rgba(255, 255, 255, 0.3);
+
+  --page-shadow: 0px 8px 14px rgba(0, 0, 0, 0.25);
+
+  --color-primary: 47, 155, 249;
+  --color-primary-contrast: #ffffff;
+  --color-secondary: 228, 78, 244;
+
+  --color-secondary-contrast: #ffffff;
+}
+
+.roam-main div, #right-sidebar div, .roam-main textarea, #right-sidebar textarea, .roam-main a #right-sidebar a {
+  color: #fff;
+}
+
+/* CHANGE COLOURS IN CANVAS */
+canvas[data-id="layer2-node"] {
+  filter: invert(1) contrast(1.1) hue-rotate(180deg) saturate(2);
+}
+
+/* CODE BLOCK STYLING */
+/* modified from https://codemirror.net/demo/theme.html#night */
+.CodeMirror {
+  background: var(--bg-color) !important;
+  color: #f8f8f8 !important;
+}
+div.CodeMirror-selected {
+  background: #447 !important;
+}
+.CodeMirror-line::selection,
+.CodeMirror-line > span::selection,
+.CodeMirror-line > span > span::selection {
+  background: rgba(68, 68, 119, 0.99);
+}
+.CodeMirror-line::-moz-selection,
+.CodeMirror-line > span::-moz-selection,
+.CodeMirror-line > span > span::-moz-selection {
+  background: rgba(68, 68, 119, 0.99);
+}
+.CodeMirror-gutters {
+  background: var(--bg-color);
+  border-right: 1px solid #252525;
+}
+.CodeMirror-guttermarker {
+  color: white !important;
+}
+.CodeMirror-guttermarker-subtle {
+  color: #bbb !important;
+}
+.CodeMirror-linenumber {
+  color: #f8f8f8;
+}
+.CodeMirror-cursor {
+  border-left: 1px solid white !important;
+}
+span.cm-qualifier {
+  color: #666666 !important;
+}
+span.cm-comment {
+  color: #c71ff9 !important;
+}
+span.cm-atom {
+  color: #b58afd !important;
+}
+span.cm-number,
+span.cm-attribute {
+  color: #ffd500 !important;
+}
+span.cm-keyword {
+  color: #599eff !important;
+}
+span.cm-string {
+  color: #37f14a !important;
+}
+span.cm-meta {
+  color: #369bff !important;
+}
+span.cm-variable-2,
+span.cm-tag {
+  color: #99b2ff !important;
+}
+span.cm-variable-3,
+span.cm-def,
+span.cm-type {
+  color: white !important;
+}
+span.cm-bracket {
+  color: #8da6ce !important;
+}
+span.cm-builtin,
+pan.cm-special {
+  color: #ff9e59 !important;
+}
+span.cm-link {
+  color: #845dc4 !important;
+}
+span.cm-error {
+  color: #f41000 !important;
+}
+.CodeMirror-activeline-background {
+  background: #1c005a !important;
+}
+.CodeMirror-matchingbracket {
+  outline: 1px solid grey !important;
+  color: white !important;
+}
+
+.rm-topbar {
+  background: black;
+}
+
+.rm-inline-references {
+  background-color: var(--bg-color);
+}
+
+/*
+My custom additions
+*/
+
+/* Fix Roam JS/CSS message */
+.rm-roam-js, .rm-roam-css
+ {
+  background: var(--bg-color);
+}
+
+/* Trying to fix linkedRef count */
+.bp3-button:not([class*="bp3-intent-"]) {
+  color: var(--icon-color) !important;
+}
+
+.block-highlight-yellow {
+  background-color: var(--bg-color)
+}
+
+.rm-ref-page-view-title a {
+  color: var(--text-color);
+}
+
+.bp3-text-overflow-ellipsis {
+  color: var(--text-color)
+}
+
+/* Quick Capture Modal */
+.rm-quick-capture-sync-modal{
+	background: var(--bg-color);
+}
+#quick-capture-history li,
+#quick-capture-history b {
+	color: var(--text-color);
+}
+
+/* Fix right triangle on linkedRef path preview */
+.rm-zoom .parent-path-wrapper {
+	padding-right: 15px;
+}
+
+.rm-graph-dropdown .bp3-menu-item {
+  color: var(--text-color);
+}
+
+.bp3-toast-message {
+  color: var(--text-color);
+}
+
+.bp3-intent-success {
+  color: var(--text-color) !important;
+}
+
+/* Fixes strange things that'd happpen to right
+   triangle when indented under an H1 */
+.roam-block {
+  min-height: 1.5em !important;
+}
+
+.rm-bq {
+  background-color: var(--bg-color);
+}
+
+/* Block references */
+.rm-block-ref {
+  border-bottom: none;
+  font-size: 1em;
+  padding: 4px;
+  color: #8088B5;
+}
+.rm-block-ref:hover {
+  background-color: #697098;
+  color: #05365E;
+  cursor: pointer;
+}
+
+/* Inputs (roam/render default) */
+input {
+  background: var(--bg-color);
+}

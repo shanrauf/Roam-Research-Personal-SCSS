@@ -1,0 +1,305 @@
+/* Status */
+:root {
+  --status-bg: var(--default-bg);
+  --enqueued-bg: rgba(0, 0, 0, 0.5);
+  --in-progress-bg: #956315;
+  --completed-bg: #379529;
+  --on-hold-bg: #37a5c8;
+  --dropped-bg: #951515;
+  --outlining-bg: #157695;
+  --fleshing-out-bg: #681595;
+  --editing-bg: #829515;
+}
+
+/* Background */
+span[data-link-title^='[[[[🧱]] 📋]]'],
+span[data-link-title^='[[[[🧱]] 📜]]'],
+span[data-link-title^='[[[[🧱]] 📺]]'],
+span[data-link-title^='[[[[🧱]] 🎬]]'],
+span[data-link-title^='[[[[🧱]] 🎥]]'],
+span[data-link-title^='[[[[🧱]] 📄]]'],
+span[data-link-title^='[[[[🧱]] 🔊]]'],
+span[data-link-title^='[[[[🧱]] 🦚]]'] {
+  background: var(--status-bg);
+}
+
+/* Triangle right */
+span[data-link-title^='[[[[🧱]] 📋]]']:after,
+span[data-link-title^='[[[[🧱]] 📜]]']:after,
+span[data-link-title^='[[[[🧱]] 📺]]']:after,
+span[data-link-title^='[[[[🧱]] 🎬]]']:after,
+span[data-link-title^='[[[[🧱]] 🎥]]']:after,
+span[data-link-title^='[[[[🧱]] 📄]]']:after,
+span[data-link-title^='[[[[🧱]] 🔊]]']:after,
+span[data-link-title^='[[[[🧱]] 🦚]]']:after {
+  border-left-color: var(--status-bg);
+}
+
+/*
+* ------------------
+* Status
+* ------------------
+*/
+/* Enqueued */
+/*
+Block
+*/
+span[data-link-title='[[🧱]] Enqueued'] {
+  display: inline-block !important;
+  visibility: hidden;
+  margin-right: -45px;
+}
+div.rm-block__input span span[data-link-title='[[🧱]] Enqueued']:before {
+  visibility: visible;
+  content: '⚫';
+  position: absolute;
+  margin-left: 10px;
+}
+/*
+Page
+*/
+span[data-link-title='[[🧱]] Enqueued'] {
+  display: none;
+}
+span[data-link-title*='[[[[🧱]] Enqueued]]'] {
+  --status-bg: var(--enqueued-bg);
+}
+span[data-link-title='[[🧱]] Enqueued'],
+span[data-tag='[[🧱]] Enqueued'] {
+  --default-bg: var(--enqueued-bg);
+  color: #fff !important;
+}
+
+/* InProgress */
+/*
+Block
+*/
+span[data-link-title='[[🧱]] InProgress'] {
+  display: inline-block !important;
+  visibility: hidden;
+  margin-right: -45px;
+}
+div.rm-block__input span span[data-link-title='[[🧱]] InProgress']:before {
+  visibility: visible;
+  content: '🟠';
+  position: absolute;
+  margin-left: 10px;
+}
+/*
+Page
+*/
+span[data-link-title='[[🧱]] InProgress'] {
+  display: none;
+}
+span[data-link-title*='[[[[🧱]] InProgress]]'] {
+  --status-bg: var(--in-progress-bg);
+}
+span[data-link-title='[[🧱]] InProgress'],
+span[data-tag='[[🧱]] InProgress'] {
+  --default-bg: var(--in-progress-bg);
+  color: #fff !important;
+}
+
+/* Completed */
+/*
+Block
+*/
+span[data-link-title='[[🧱]] Completed'] {
+  display: inline-block !important;
+  visibility: hidden;
+  margin-right: -45px;
+}
+div.rm-block__input span span[data-link-title='[[🧱]] Completed']:before {
+  visibility: visible;
+  content: '🟢';
+  position: absolute;
+  margin-left: 10px;
+}
+/*
+Page
+*/
+span[data-link-title='[[🧱]] Completed'] {
+  display: none;
+}
+span[data-link-title*='[[[[🧱]] Completed]]'] {
+  --status-bg: var(--completed-bg);
+}
+span[data-link-title='[[🧱]] Completed'],
+span[data-tag='[[🧱]] Completed'] {
+  --default-bg: var(--completed-bg);
+  color: #fff !important;
+}
+/* OnHold */
+/*
+Block
+*/
+span[data-link-title='[[🧱]] OnHold'] {
+  display: inline-block !important;
+  visibility: hidden;
+  margin-right: -45px;
+}
+div.rm-block__input span span[data-link-title='[[🧱]] OnHold']:before {
+  visibility: visible;
+  content: '🔵';
+  position: absolute;
+  margin-left: 10px;
+}
+/*
+Page
+*/
+span[data-link-title='[[🧱]] OnHold'] {
+  display: none;
+}
+span[data-link-title*='[[[[🧱]] OnHold]]'] {
+  --status-bg: var(--on-hold-bg);
+}
+span[data-link-title='[[🧱]] OnHold'],
+span[data-tag='[[🧱]] OnHold'] {
+  --default-bg: var(--on-hold-bg);
+  color: #fff !important;
+}
+/* Dropped */
+/*
+Block
+*/
+span[data-link-title='[[🧱]] Dropped'] {
+  display: inline-block !important;
+  visibility: hidden;
+  margin-right: -45px;
+}
+div.rm-block__input span span[data-link-title='[[🧱]] Dropped']:before {
+  visibility: visible;
+  content: '🔴';
+  position: absolute;
+  margin-left: 10px;
+}
+/*
+Page
+*/
+span[data-link-title='[[🧱]] Dropped'] {
+  display: none;
+}
+span[data-link-title*='[[[[🧱]] Dropped]]'] {
+  --status-bg: var(--dropped-bg);
+}
+span[data-link-title='[[🧱]] Dropped'],
+span[data-tag='[[🧱]] Dropped'] {
+  --default-bg: var(--dropped-bg);
+  color: #fff !important;
+}
+/* Outlining */
+/*
+Block
+*/
+span[data-link-title='[[🧱]] Outlining'] {
+  display: inline-block !important;
+  visibility: hidden;
+  margin-right: -45px;
+}
+div.rm-block__input span span[data-link-title='[[🧱]] Outlining']:before {
+  visibility: visible;
+  content: '🟦';
+  position: absolute;
+  margin-left: 10px;
+}
+/*
+Page
+*/
+span[data-link-title='[[🧱]] Outlining'] {
+  display: none;
+}
+span[data-link-title*='[[[[🧱]] Outlining]]'] {
+  --status-bg: var(--outlining-bg);
+}
+span[data-link-title='[[🧱]] Outlining'],
+span[data-tag='[[🧱]] Outlining'] {
+  --default-bg: var(--outlining-bg);
+  color: #fff !important;
+}
+/* FleshingOut */
+/*
+Block
+*/
+span[data-link-title='[[🧱]] FleshingOut'] {
+  display: inline-block !important;
+  visibility: hidden;
+  margin-right: -45px;
+}
+div.rm-block__input span span[data-link-title='[[🧱]] FleshingOut']:before {
+  visibility: visible;
+  content: '🟣';
+  position: absolute;
+  margin-left: 10px;
+}
+/*
+Page
+*/
+span[data-link-title='[[🧱]] FleshingOut'] {
+  display: none;
+}
+span[data-link-title*='[[[[🧱]] FleshingOut]]'] {
+  --status-bg: var(--fleshing-out-bg);
+}
+span[data-link-title='[[🧱]] FleshingOut'],
+span[data-tag='[[🧱]] FleshingOut'] {
+  --default-bg: var(--fleshing-out-bg);
+  color: #fff !important;
+}
+/* Drafting */
+/*
+Block
+*/
+span[data-link-title='[[🧱]] Drafting'] {
+  display: inline-block !important;
+  visibility: hidden;
+  margin-right: -45px;
+}
+div.rm-block__input span span[data-link-title='[[🧱]] Drafting']:before {
+  visibility: visible;
+  content: '🟠';
+  position: absolute;
+  margin-left: 10px;
+}
+/*
+Page
+*/
+span[data-link-title='[[🧱]] Drafting'] {
+  display: none;
+}
+span[data-link-title*='[[[[🧱]] Drafting]]'] {
+  --status-bg: var(--in-progress-bg);
+}
+span[data-link-title='[[🧱]] Drafting'],
+span[data-tag='[[🧱]] Drafting'] {
+  --default-bg: var(--in-progress-bg);
+  color: #fff !important;
+}
+/* Editing */
+/*
+Block
+*/
+span[data-link-title='[[🧱]] Editing'] {
+  display: inline-block !important;
+  visibility: hidden;
+  margin-right: -45px;
+}
+div.rm-block__input span span[data-link-title='[[🧱]] Editing']:before {
+  visibility: visible;
+  content: '🟡';
+  position: absolute;
+  margin-left: 10px;
+}
+/*
+Page
+*/
+span[data-link-title='[[🧱]] Editing'] {
+  display: none;
+}
+span[data-link-title*='[[[[🧱]] Editing]]'] {
+  --status-bg: var(--editing-bg);
+}
+span[data-link-title='[[🧱]] Editing'],
+span[data-tag='[[🧱]] Editing'] {
+  --default-bg: var(--editing-bg);
+  color: #fff !important;
+}

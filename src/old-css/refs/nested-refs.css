@@ -1,0 +1,23 @@
+:root {
+    --line-color-1: lightsteelblue;
+    --line-color-2: orange;  
+    --line-color-3: rgb(206,133,0);
+    --line-color-4: rgb(166,107,0);
+    }
+
+
+.rm-page-ref:hover {
+  border-bottom: 2px solid var(--line-color-1);
+}
+
+.rm-page-ref .rm-page-ref:hover {
+  border-bottom: 2px solid var(--line-color-2);
+}
+
+.rm-page-ref .rm-page-ref .rm-page-ref:hover {
+  border-bottom: 2px solid var(--line-color-3);
+}
+
+.rm-page-ref .rm-page-ref .rm-page-ref .rm-page-ref:hover {
+  border-bottom: 2px solid var(--line-color-4);
+}

@@ -1,0 +1,88 @@
+:root {
+  --feeling-bg: var(--default-bg);
+  --feeling-1-bg: rgba(252, 243, 223, 0.5);
+  --feeling-2-bg: rgba(238, 216, 166, 0.5);
+  --feeling-3-bg: rgba(188, 142, 92, 0.5);
+  --feeling-4-bg: rgba(144, 104, 53, 0.5);
+  --feeling-5-bg: rgba(79, 50, 28, 0.5);
+}
+
+/* Background */
+span[data-link-title^='[[💚]]'] {
+  background: var(--feeling-bg);
+}
+
+/* Triangle right */
+span[data-link-title^='[[💚]]']:after {
+  border-left-color: var(--feeling-bg);
+}
+
+/*
+* ------------------
+* Feeling Intensity
+* ------------------
+*/
+/* Feeling 1 */
+span[data-link-title='💚: 1'] {
+  display: none;
+}
+span[data-link-title*='[[💚: 1]]'] {
+  --feeling-bg: var(--feeling-1-bg);
+}
+span[data-link-title='💚: 1'],
+span[data-tag='💚: 1'] {
+  --default-bg: var(--feeling-1-bg);
+  color: #fff !important;
+}
+
+/* Feeling 2 */
+span[data-link-title='💚: 2'] {
+  display: none;
+}
+span[data-link-title*='[[💚: 2]]'] {
+  --feeling-bg: var(--feeling-2-bg);
+}
+span[data-link-title='💚: 2'],
+span[data-tag='💚: 2'] {
+  --default-bg: var(--feeling-2-bg);
+  color: #fff !important;
+}
+
+/* Feeling 3 */
+span[data-link-title='💚: 3'] {
+  display: none;
+}
+span[data-link-title*='[[💚: 3]]'] {
+  --feeling-bg: var(--feeling-3-bg);
+}
+span[data-link-title='💚: 3'],
+span[data-tag='💚: 3'] {
+  --default-bg: var(--feeling-3-bg);
+  color: #fff !important;
+}
+
+/* Feeling 4 */
+span[data-link-title='💚: 4'] {
+  display: none;
+}
+span[data-link-title*='[[💚: 4]]'] {
+  --feeling-bg: var(--feeling-4-bg);
+}
+span[data-link-title='💚: 4'],
+span[data-tag='💚: 4'] {
+  --default-bg: var(--feeling-4-bg);
+  color: #fff !important;
+}
+
+/* Feeling 5 */
+span[data-link-title='💚: 5'] {
+  display: none;
+}
+span[data-link-title*='[[💚: 5]]'] {
+  --feeling-bg: var(--feeling-5-bg);
+}
+span[data-link-title='💚: 5'],
+span[data-tag='💚: 5'] {
+  --default-bg: var(--feeling-5-bg);
+  color: #fff !important;
+}

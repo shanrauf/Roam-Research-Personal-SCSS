@@ -1,0 +1,18 @@
+rect {
+  fill: var(--page-color) !important;
+}
+
+.path {
+  stroke: var(--bg-color) !important;
+}
+
+/* i ened to select em all...
+#arrowhead24, #arrowhead30, #arrowhead31 {
+  stroke: var(--bg-color) !important;
+  fill: var(--bg-color) !important;
+}
+*/
+
+.edgeLabel {
+  background-color: var(--pg-color) !important;
+}

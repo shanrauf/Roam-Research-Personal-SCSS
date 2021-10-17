@@ -1,0 +1,21 @@
+/* Abhay - Hide video in sidebar */
+.rm-spacing--full .rm-video-player__spacing-wrapper {
+  max-width: 100%;
+}
+
+#right-sidebar .rm-iframe__spacing-wrapper {
+  visibility: hidden;
+  max-height: 10px;
+}
+
+#right-sidebar .rm-iframe__spacing-wrapper:before {
+  visibility: visible;
+  content: '<--- Click to see video';
+  font-style: italic;
+}
+
+/* Fabrice Gallet - enlargen video */
+.rm-video-player__container {
+  margin-left: -10px;
+  margin-right: -10px;
+}
