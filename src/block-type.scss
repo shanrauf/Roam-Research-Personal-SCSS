@@ -2,8 +2,6 @@
 Custom links
 */
 
-// TODO: You need like nested for loops if you want chaining block types -_-
-
 // Change vars later if u want/need to
 $blockTypes: (
   '🌲': --evergreen-type-bg,
@@ -18,7 +16,6 @@ $blockTypes: (
   '💻': --coding-activity-type-bg,
   '🔂': --habit-type-bg,
   '🧍‍♂️': --person-type-bg,
-  '👬': --friend-type-bg,
   '📇': --index-note-type-bg,
   '🔭': --observation-type-bg,
   '❗': --decision-type-bg,
@@ -37,6 +34,9 @@ $blockTypes: (
   '🔊': --podcast-type-bg,
   '🎯': --goal-type-bg,
   '💚': --feeling-type-bg,
+  // Tags
+  '👬': --friend-type-bg,
+  '👨‍👩‍👧‍👦': --family-type-bg,
 );
 
 :root {
@@ -79,6 +79,7 @@ $blockTypes: (
   --paper-type-bg: purple;
   --question-type-bg: rgb(255, 255, 255);
   --goal-type-bg: #ff6459;
+  --family-type-bg: rgb(68, 68, 255);
   --index-note-type-bg: rgb(134, 96, 96);
   --feeling-type-bg: rgb(185, 174, 174);
 }
