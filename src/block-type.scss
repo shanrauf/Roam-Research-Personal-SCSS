@@ -34,6 +34,8 @@ $blockTypes: (
   '🔊': --podcast-type-bg,
   '🎯': --goal-type-bg,
   '💚': --feeling-type-bg,
+  '📥': --queue-type-bg,
+  '🌱': --claim-type-bg,
   // Tags
   '👬': --friend-type-bg,
   '👨‍👩‍👧‍👦': --family-type-bg,
@@ -48,7 +50,7 @@ $blockTypes: (
   --attribute-chain-margin: -0.25em;
   --default-bg: var(--bg-color);
   --triangle-cutout-color: var(--page-color);
-
+  --queue-type-bg: rgb(49, 87, 255);
   --generic-project-type-bg: #cc9c8a;
   --sensemaking-activity-type-bg: #65a9ff;
   --work-project-type-bg: #ff8178;
@@ -62,6 +64,7 @@ $blockTypes: (
   --song-type-bg: #d1b8ff;
   --person-type-bg: #b56363;
   --video-game-type-bg: #009688;
+  --claim-type-bg: rgb(223, 255, 172);
   --observation-type-bg: #47fddc;
   --decision-type-bg: rgb(255, 126, 126);
   --piece-type-bg: #fbec5f;
