@@ -107,6 +107,7 @@ $blockTypes: (
   span[data-link-title='#{$type}'] > span.rm-page-ref,
   span[data-tag='#{$type}'] {
     background: var(--default-bg);
+    color: #fff !important;
     padding-left: 0.5em;
     display: inline;
     position: relative;
