@@ -5,7 +5,8 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "dev": "sass --watch src/main.scss build/output.css"
+    "dev": "sass --watch src/main.scss build/output.css",
+    "build": "sass src/main.scss build/output.css --style compressed"
   },
   "author": "Shan Rauf",
   "license": "ISC",
