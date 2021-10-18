@@ -5,12 +5,15 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "dev": "sass --watch src/main.scss build/output.css",
-    "build": "sass src/main.scss build/output.css --style compressed"
+    "dev": "sass --watch src/main.scss build/output.css --style compressed",
+    "start": "npm-run-all --parallel dev serve",
+    "serve": "serve"
   },
   "author": "Shan Rauf",
   "license": "ISC",
   "devDependencies": {
-    "sass": "^1.43.2"
+    "npm-run-all": "^4.1.5",
+    "sass": "^1.43.2",
+    "serve": "^12.0.0"
   }
 }
