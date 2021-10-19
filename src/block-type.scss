@@ -192,23 +192,23 @@ $blockTypes: (
 
 /* Nested typed references: remove cutout, reduce margin (may remove if performance issues) */
 @mixin removeTriangleCutoutOnNestedTypedRefs($type1, $type2) {
-  /* Remove triangle cutout */
-  span[data-link-title^='[[#{$type1}']
-    span[data-link-title^='[[#{$type2}']
-    span[data-link-title='#{$type2}']
-    > span.rm-page-ref {
-    display: none;
-  }
-  /* Reduce triangle margin */
-  span[data-link-title^='[[#{$type1}']
-    span[data-link-title^='[[#{$type2}']
+  span[data-link-title^='[[#{$type1}'] span[data-link-title*='[[#{$type2}'] {
+    border-left: 2px solid inherit;
+    border-top-left-radius: 15px;
+    border-bottom-left-radius: 15px;
     span[data-link-title='#{$type2}'] {
-    margin-right: 0;
-  }
-  span[data-link-title^='[[#{$type1}']
-    span[data-link-title^='[[#{$type2}']
-    span[data-link-title='#{$type2}']:after {
-    display: none;
+      /* Reduce triangle margin */
+      margin-right: 0.2em;
+
+      /* Remove triangle cutout */
+      span.rm-page-ref {
+        display: none;
+      }
+      /* Hide triangle right */
+      &:after {
+        display: none;
+      }
+    }
   }
 }
 
