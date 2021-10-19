@@ -40,6 +40,9 @@ $blockTypes: (
   // Tags
   '👬': --friend-type-bg,
   '👨‍👩‍👧‍👦': --family-type-bg,
+  // Experiments
+  '🧬': --health-experiment-bg,
+  '🏋️‍♂️': --exercise-experiment-bg,
 );
 
 :root {
@@ -52,6 +55,8 @@ $blockTypes: (
   --default-bg: var(--bg-color);
   --triangle-cutout-color: var(--page-color);
   --queue-type-bg: rgb(49, 87, 255);
+  --health-experiment-bg: rgb(142, 255, 212);
+  --exercise-experiment-bg: rgb(139, 139, 139);
   --generic-project-type-bg: #cc9c8a;
   --sensemaking-activity-type-bg: #65a9ff;
   --work-project-type-bg: #ff8178;
@@ -194,11 +199,11 @@ $blockTypes: (
 @mixin removeTriangleCutoutOnNestedTypedRefs($type1, $type2) {
   span[data-link-title^='[[#{$type1}'] span[data-link-title*='[[#{$type2}'] {
     border-left: 2px solid inherit;
-    border-top-left-radius: 15px;
-    border-bottom-left-radius: 15px;
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
     span[data-link-title='#{$type2}'] {
       /* Reduce triangle margin */
-      margin-right: 0.2em;
+      margin-right: 0.3em;
 
       /* Remove triangle cutout */
       span.rm-page-ref {
