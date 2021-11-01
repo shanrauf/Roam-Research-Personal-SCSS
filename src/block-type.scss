@@ -19,6 +19,7 @@ $blockTypes: (
   '🧍‍♂️': --person-type-bg,
   '📇': --index-note-type-bg,
   '🔭': --observation-type-bg,
+  '🎭': --play-type-bg,
   '❗': --decision-type-bg,
   '📋': --generic-project-type-bg,
   '📝': --piece-type-bg,
@@ -30,6 +31,7 @@ $blockTypes: (
   '🎥': --video-type-bg,
   '🎬': --movie-type-bg,
   '📺': --tv-type-bg,
+  '📄': --article-type-bg,
   '📜': --paper-type-bg,
   '❓': --question-type-bg,
   '🔊': --podcast-type-bg,
@@ -37,12 +39,33 @@ $blockTypes: (
   '💚': --feeling-type-bg,
   '📥': --queue-type-bg,
   '🌱': --claim-type-bg,
+  '🔁': --recurring-task-type-bg,
   // Tags
   '👬': --friend-type-bg,
   '👨‍👩‍👧‍👦': --family-type-bg,
   // Experiments
   '🧬': --health-experiment-bg,
   '🏋️‍♂️': --exercise-experiment-bg,
+);
+
+$chainingTypes: (
+  '🌲': (
+    📇,
+    §,
+    ⚙,
+    🌲,
+  ),
+  '✅': (
+    💻,
+    🤓,
+    📝,
+  ),
+  '📋': (
+    💻,
+    🤓,
+    📝,
+    🌲,
+  ),
 );
 
 :root {
@@ -58,6 +81,7 @@ $blockTypes: (
   --health-experiment-bg: rgb(142, 255, 212);
   --exercise-experiment-bg: rgb(139, 139, 139);
   --generic-project-type-bg: #cc9c8a;
+  --recurring-task-type-bg: #89d0ff;
   --sensemaking-activity-type-bg: #65a9ff;
   --work-project-type-bg: #ff8178;
   --personal-project-type-bg: #a674ff;
@@ -74,6 +98,7 @@ $blockTypes: (
   --observation-type-bg: #47fddc;
   --decision-type-bg: rgb(255, 126, 126);
   --piece-type-bg: #fbec5f;
+  --play-type-bg: rgb(86, 86, 128);
   --model-type-bg: rgb(204, 204, 235);
   --evergreen-type-bg: #76dd74;
   --tweet-type-bg: #2980b9;
@@ -199,8 +224,8 @@ $blockTypes: (
 @mixin removeTriangleCutoutOnNestedTypedRefs($type1, $type2) {
   span[data-link-title^='[[#{$type1}'] span[data-link-title*='[[#{$type2}'] {
     border-left: 2px solid inherit;
-    border-top-left-radius: 5px;
-    border-bottom-left-radius: 5px;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
     span[data-link-title='#{$type2}'] {
       /* Reduce triangle margin */
       margin-right: 0.3em;
@@ -225,6 +250,7 @@ $blockTypes: (
   }
 }
 
+/* Main */
 @each $type, $color in $blockTypes {
   @include pushTextFromUnderTriangle($type);
   @include defaultBlockTypeBg($type);
@@ -234,8 +260,11 @@ $blockTypes: (
   @include revealHiddenLinksNextToAttributes($type);
   @include blockTypeSpecificBg($type, $color);
   @include typedRefText($type);
-  @each $type2, $color2 in $blockTypes {
-    @include chainBlockTypes($type, $type2);
-    @include removeTriangleCutoutOnNestedTypedRefs($type, $type2);
+}
+
+@each $baseType, $chainTypes in $chainingTypes {
+  @each $chainType in $chainTypes {
+    @include chainBlockTypes($baseType, $chainType);
+    @include removeTriangleCutoutOnNestedTypedRefs($baseType, $chainType);
   }
 }
