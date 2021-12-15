@@ -1,0 +1,16 @@
+/* Hacky CSS that sucks */
+.rm-code-block,
+.cm-gutters {
+  background-color: black !important;
+}
+.cm-activeLine,
+.cm-activeLineGutter {
+  background-color: rgb(14, 14, 14) !important;
+}
+.cm-focused .cm-activeLine {
+  background-color: rgb(14, 14, 14) !important;
+}
+
+.cm-focused .cm-activeLineGutter {
+  background-color: rgb(14, 14, 14) !important;
+}
