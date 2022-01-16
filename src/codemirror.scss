@@ -1,16 +1,26 @@
 /* Hacky CSS that sucks */
-.rm-code-block,
-.cm-gutters {
-  background-color: black !important;
+// .rm-code-block,
+// .cm-gutters {
+//   background-color: black !important;
+// }
+// .cm-activeLine,
+// .cm-activeLineGutter {
+//   background-color: rgb(14, 14, 14) !important;
+// }
+// .cm-focused .cm-activeLine {
+//   background-color: rgb(14, 14, 14) !important;
+// }
+
+// .cm-focused .cm-activeLineGutter {
+//   background-color: rgb(14, 14, 14) !important;
+// }
+.ͼ4 .cm-line {
+  caret-color: black !important;
 }
-.cm-activeLine,
-.cm-activeLineGutter {
-  background-color: rgb(14, 14, 14) !important;
-}
-.cm-focused .cm-activeLine {
-  background-color: rgb(14, 14, 14) !important;
+div .cm-line {
+  color: black !important;
 }
 
-.cm-focused .cm-activeLineGutter {
-  background-color: rgb(14, 14, 14) !important;
+.cm-gutterElement {
+  color: black !important;
 }

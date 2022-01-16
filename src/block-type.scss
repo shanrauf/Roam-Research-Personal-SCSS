@@ -40,6 +40,7 @@ $blockTypes: (
   '📥': --queue-type-bg,
   '🌱': --claim-type-bg,
   '🔁': --recurring-task-type-bg,
+  '📃': --list-type-bg,
   // Tags
   '👬': --friend-type-bg,
   '👨‍👩‍👧‍👦': --family-type-bg,
@@ -66,6 +67,9 @@ $chainingTypes: (
     📝,
     🌲,
   ),
+  '🧍‍♂️': (
+    👨‍👩‍👧‍👦
+  )
 );
 
 :root {
@@ -93,6 +97,7 @@ $chainingTypes: (
   --coding-activity-type-bg: rgb(125, 170, 113);
   --song-type-bg: #d1b8ff;
   --person-type-bg: #b56363;
+  --list-type-bg: rgb(153, 193, 216);
   --video-game-type-bg: #009688;
   --claim-type-bg: rgb(223, 255, 172);
   --observation-type-bg: #47fddc;
