@@ -18,7 +18,7 @@ $blockTypes: (
   '🔂': --habit-type-bg,
   '🧍‍♂️': --person-type-bg,
   '📇': --index-note-type-bg,
-  '🔭': --observation-type-bg,
+  '🔭': --session-type-bg,
   '🎭': --play-type-bg,
   '❗': --decision-type-bg,
   '📋': --generic-project-type-bg,
@@ -60,6 +60,7 @@ $chainingTypes: (
     💻,
     🤓,
     📝,
+    🔭,
   ),
   '📋': (
     💻,
@@ -68,8 +69,8 @@ $chainingTypes: (
     🌲,
   ),
   '🧍‍♂️': (
-    👨‍👩‍👧‍👦
-  )
+    👨‍👩‍👧‍👦,
+  ),
 );
 
 :root {
@@ -100,7 +101,7 @@ $chainingTypes: (
   --list-type-bg: rgb(153, 193, 216);
   --video-game-type-bg: #009688;
   --claim-type-bg: rgb(223, 255, 172);
-  --observation-type-bg: #47fddc;
+  --session-type-bg: #47fddc;
   --decision-type-bg: rgb(255, 126, 126);
   --piece-type-bg: #fbec5f;
   --play-type-bg: rgb(86, 86, 128);
