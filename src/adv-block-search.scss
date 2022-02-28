@@ -8,21 +8,21 @@
 
 #rm-modal-portal > div > div > div.bp3-dialog-container.bp3-overlay-content {
   position: relative !important;
-  top: -2vh !important; 
+  top: -2vh !important;
 }
 
 #rm-modal-portal .bp3-overlay-scroll-container {
   max-height: none !important;
   overflow: hidden !important;
-} 
+}
 
 /* Disable transitions */
 * {
-    -o-transition-property: none !important;
-    -moz-transition-property: none !important;
-    -ms-transition-property: none !important;
-    -webkit-transition-property: none !important;
-    transition-property: none !important;
+  -o-transition-property: none !important;
+  -moz-transition-property: none !important;
+  -ms-transition-property: none !important;
+  -webkit-transition-property: none !important;
+  transition-property: none !important;
 }
 
 /* Make block text wrap */
