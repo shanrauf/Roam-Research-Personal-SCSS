@@ -130,3 +130,8 @@ My custom additions
 input {
   background: var(--bg-color);
 }
+
+/* For block reference backlinks (shift click), get rid of inline styling rgb(225, 232, 237) */
+.rm-sidebar div {
+  background-color: inherit !important;
+}
