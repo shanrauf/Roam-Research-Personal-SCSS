@@ -15,10 +15,10 @@ $blockTypes: (
   '✅': --task-type-bg,
   '💡': --idea-type-bg,
   '💻': --coding-activity-type-bg,
-  '🔂': --habit-type-bg,
+  '🔂': --session-type-bg,
   '🧍‍♂️': --person-type-bg,
   '📇': --index-note-type-bg,
-  '🔭': --session-type-bg,
+  '🔭': --observation-type-bg,
   '🎭': --play-type-bg,
   '❗': --decision-type-bg,
   '📋': --generic-project-type-bg,
@@ -62,7 +62,7 @@ $chainingTypes: (
     🤓,
     🧐,
     📝,
-    🔭
+    🔂
   ),
   '📋': (
     💻,
@@ -70,10 +70,14 @@ $chainingTypes: (
     🧐,
     📝,
     🌲,
+    🔂
   ),
   '🧍‍♂️': (
     👨‍👩‍👧‍👦,
   ),
+  '🔭': (
+    🧐
+  )
 );
 
 :root {
@@ -97,14 +101,14 @@ $chainingTypes: (
   --task-type-bg: rgb(105, 77, 77);
   --company-type-bg: rgb(128, 102, 102);
   --idea-type-bg: #b9a80f;
-  --habit-type-bg: #3895d3;
+  --session-type-bg: #3895d3;
   --coding-activity-type-bg: rgb(125, 170, 113);
   --song-type-bg: #d1b8ff;
   --person-type-bg: #b56363;
   --list-type-bg: rgb(153, 193, 216);
   --video-game-type-bg: #009688;
   --claim-type-bg: rgb(223, 255, 172);
-  --session-type-bg: #47fddc;
+  --observation-type-bg: #47fddc;
   --decision-type-bg: rgb(255, 126, 126);
   --piece-type-bg: #fbec5f;
   --play-type-bg: rgb(86, 86, 128);
